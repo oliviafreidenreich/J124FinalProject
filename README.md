@@ -20,16 +20,17 @@ To begin cleaning, I converted all of the percent columns into percentages and r
 ## Interviewing the Data
 
 #### General inquiry: What is ADP and how is it calculated?
-Answer found in notes section of report: “Average Daily Population (ADP) is calculated by taking a count of the number of juveniles in custody at 0600 hours each day of the month, adding these daily counts together, and dividing the sum by the number of days in each month. A one-day snapshot is the number of juveniles in custody at 0600 hours on the 15th day of the month. For the misdemeanor and felony populations the one-day snapshot each month provides an estimate of the monthly population and is used to estimate the average monthly population (AMP) for the year” (JDPS Data, March 2022).
+> Answer found in notes section of report: “Average Daily Population (ADP) is calculated by taking a count of the number of juveniles in custody at 0600 hours each day of the month, adding these daily counts together, and dividing the sum by the number of days in each month. A one-day snapshot is the number of juveniles in custody at 0600 hours on the 15th day of the month. For the misdemeanor and felony populations the one-day snapshot each month provides an estimate of the monthly population and is used to estimate the average monthly population (AMP) for the year” (JDPS Data, March 2022).
 
 Other information: “JuvenileCamps/Ranches only house Post-Disposition juveniles, therefore their Total ADP is only composed of Post-Disposition juveniles” (JDPS Data, March 2022). 
-This is why in every table for Camps/Ranches, there are zeroes in the Pre-Disposition columns – they are not mistakes or missing data!
+> This is why in every table for Camps/Ranches, there are zeroes in the Pre-Disposition columns – they are not mistakes or missing data!
 
 
 ### Question 1: In 2021, which California counties had the highest population of juvenile inmates on an average day? Which had the lowest population?
 #### Analysis Process:
-1. Sorted column B (“Average Daily Population 2021”) in Table 4 (“2021CountiesJuvenileFacilities”) from Z to A. This revealed which counties had the highest and lowest population.
-!['Name I give the image','Alt text desscribes the image'](/File path to the image OR an image URL)
+1. Sorted column B (“Average Daily Population 2021”) in Table 4 (“2021CountiesJuvenileFacilities”) from Z to A. This revealed which counties had the highest and lowest population.<br>
+![Los Angeles County has by far the largest ADP at 366 in 2021. Orange and San Diego Counties are second and third, while Yolo, Tehama, and San Benito counties have the lowest ADP.](/J124 Q1.1.PNG)
+
 [insert 2 images: J124 Q1.1 and 1.2]
 
 
