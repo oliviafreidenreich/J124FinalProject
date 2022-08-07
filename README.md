@@ -11,4 +11,6 @@ I froze and bolded the headings on each sheet. I used the original titles for ea
 
 To begin cleaning, I converted all of the percent columns into percentages and reduced the trailing zeroes so they were whole numbers:
 
-!
+![Decimal form, Percent columns with numbers in decimal form](/J124Cleaning1)
+
+!['Name I give the image','Alt text desscribes the image'](/File path to the image OR an image URL)
