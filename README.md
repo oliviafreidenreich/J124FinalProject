@@ -28,7 +28,7 @@ Other information: “JuvenileCamps/Ranches only house Post-Disposition juvenile
 > This is why in every table for Camps/Ranches, there are zeroes in the Pre-Disposition columns – they are not mistakes or missing data!
 
 
-### Question 1: In 2021, which California counties had the highest population of juvenile inmates on an average day? Which had the lowest population? Which individual counties had the most drastic differences between their misdemeanor and felony charges? Which had the biggest differences between pre-disposition inmates and post-disposition inmates?
+### Question 1: In 2021, which California counties had the highest population of juvenile inmates on an average day? Which had the lowest population? 
 #### Analysis Process:
 1. Sorted column B (“Average Daily Population 2021”) in Table 4 (“2021CountiesJuvenileFacilities”) from Z to A. This revealed which counties had the highest and lowest population.
 
@@ -36,7 +36,15 @@ Other information: “JuvenileCamps/Ranches only house Post-Disposition juvenile
 
 > Los Angeles County has by far the largest ADP at 366 in 2021. Orange and San Diego Counties are second and third, while Yolo, Tehama, and San Benito counties have the lowest ADP. 
 
-2. To answer the second part of this question, I sorted the Pre-Disposition by Percent of ADP column A-Z, and verified my findings by then sorting the Post-Disposition by Percent of ADP column by Z-A. 
+#### Visual Representation of Question 1:
+
+![D70aQ-why-is-los-angeles-locking-up-kids-twice-as-often-as-other-counties-](https://user-images.githubusercontent.com/109619870/183396470-624f243a-c36f-4f86-ad65-62d9248387c6.png)(<"https://datawrapper.dwcdn.net/D70aQ/1/")
+
+
+
+### Question 2: Which individual counties had the most drastic differences between their misdemeanor and felony charges? Which had the biggest differences between pre-disposition inmates and post-disposition inmates?
+#### Analysis Process:
+1. I sorted the Pre-Disposition by Percent of ADP column A-Z, and verified my findings by then sorting the Post-Disposition by Percent of ADP column by Z-A. 
     i. I verified my numbers like this because I didn't create the percentage calculations. I first wanted to be sure that the percentages added to 100%, because inmates can either be pre- or post-disposition (there is no room for nuance), and also be sure that the values were the most extreme in each column. 
 
 <img width="613" alt="Merced with 16% Pre-Disposition and 84% Post-Disposition" src="https://user-images.githubusercontent.com/109619870/183328764-fc97c4bf-2c0a-4f25-84db-7f1f72dae955.png">
@@ -44,14 +52,14 @@ Other information: “JuvenileCamps/Ranches only house Post-Disposition juvenile
 
 > Merced and Santa Cruz counties have the largest range in their pre-disposition and post-disposition population totals. Across all types of facilities (juvenile justice facilities run by the state or county, juvenile halls, and camps or ranches), Merced held large numbers of youth _after_ a conviction, and few were awaiting disposition. This dataset doesn't answer where arrested youth are held or if they are held in custody at all, but I am curious to know why this difference is so drastic. Santa Cruz was on the opposite side of Merced: a large number of youth in juvenile centers are awaiting their disposition, but few in-custody have already been through the court process. Again, this dataset doesn't answer the obvious question – why – but it is a striking point nonetheless. 
 
-3. I solved the misdemeanor and felony charges part of the question similarly to the above question. Sort the data set using the columns that report percentage totals, not actual totals. 
+2. I solved the misdemeanor and felony charges part of the question similarly to the above question. Sort the data set using the columns that report percentage totals, not actual totals. 
 
 <img width="1163" alt="Butte County with 0% misdemeanor charges and 100% felony charges" src="https://user-images.githubusercontent.com/109619870/183330053-35446840-bc2a-42eb-a0ad-afd2b99877ac.png">
 <img width="1163" alt="Del Norte County with 85% misdemeanor charges and 15% felony charges" src="https://user-images.githubusercontent.com/109619870/183330085-c34d1b7d-7ea2-4ede-8b53-41a059ec40e0.png">
 
 > I should point out here that although these percentages are striking, due to the large range they contain, the actual population numbers of youth is small, so the percentages are drastic. This is the same for the previous question. Here, we would be rational to find the 0% to 100% range between misdemeanor and felony charges in Butte County significant. But upon closer look, there are only 11 individuals total in the population. We should take these ranges with a grain of salt, because they represent such a small amount of people. If the population was over 100, for instance, the percentages would matter more – we would have more credibility in taking this as a pattern, rather than chance. 
 
-### Question 2: Which counties are closest to Berkeley, California? Where do they fall in the 2021 data of incarcerated youth? Look at ADP and differences between Pre and Post Disposition.
+### Question 3: Which counties are closest to Berkeley, California? Where do they fall in the 2021 data of incarcerated youth? Look at ADP and differences between Pre and Post Disposition.
 
 ![J124BayAreaCounties](https://user-images.githubusercontent.com/109619870/183314522-864afd9a-e8d7-4202-a1fa-814557ae94e2.gif)
 
@@ -64,17 +72,24 @@ Other information: “JuvenileCamps/Ranches only house Post-Disposition juvenile
 
 <img width="300" alt="Counties sorted by ADP" src="https://user-images.githubusercontent.com/109619870/183314669-6e761f39-1b7f-4d1f-8da1-14d7b0302aa1.png"> <img width="300" alt="Counties sorted by Pre-Disposition as a Percent of ADP" src="https://user-images.githubusercontent.com/109619870/183314671-416485c7-8e7e-406e-90a4-9de27fd77e05.png"> <img width="300" alt="Counties sorted by Post-Disposition as a Percent of ADP" src="https://user-images.githubusercontent.com/109619870/183314674-b1b09c84-9963-4b27-86ce-a2e5a4845acc.png">
 
-> explanation of Q2 answer
+> 
 
-### Question 3: Let's look at data from 2002 – 2021 across all California counties. How does the average population compare across both _population counts taken_ and _types of facilities_?
+### Question 4: Let's look at data from 2002 – 2021 across all California counties. How does the average population compare across both _population counts taken_ and _types of facilities_?
 
 1. To look at this data, I duplicated Table 1 which held the data of statewide sum of populations within juvenile facilities from 2002 to 2021. 
 2. I then copied and pasted in the data from the statewide combined population of juvenile halls and of juvenile camps/ranches. I would have used a VLOOKUP command if I needed to, but it was easier to just copy and paste it in, because the data was all sorted by year from 2002 – 2021. 
-3. 
-4. My new dataset looked great!
+3. I then made a "Total ADP" column by adding CAFacilities ADP, CAHalls ADP, and CACamp/Ranch ADP. 
+4. I added new columns 
 
+<img width="888" alt="Screen Shot 2022-08-08 at 12 47 48 AM" src="https://user-images.githubusercontent.com/109619870/183366926-33ac67da-1995-4893-93dc-401949ee4844.png">
 
+### Question 5: Juvenile halls are short-term lockups located in county court buildings. After the announcement of the closure of the DJJ, pressure was added to county facilities like juvenile halls to hold youth until a different solution presents itself. Let's look closer at data for the average daily population of Bay Area juvenile halls over the past 20 years. 
 
-<img width="338" alt="Screen Shot 2022-08-07 at 8 21 09 PM" src="https://user-images.githubusercontent.com/109619870/183331888-ef7d8bfc-4d3b-4562-b203-936fed7e17ca.png">
+pivot table counties - regions
+<img width="338" alt="Screen Shot 2022-08-07 at 8 21 09 PM" src="https://user-images.githubusercontent.com/109619870/183331888-ef7d8bfc-4d3b-4562-b203-936fed7e17ca.png"> 
+
+<img width="1272" alt="Screen Shot 2022-08-08 at 2 13 18 AM" src="https://user-images.githubusercontent.com/109619870/183383356-4e58d66d-cd59-4a0a-ab9b-500c284a1603.png">
+
+<img width="330" alt="Screen Shot 2022-08-08 at 2 08 51 AM" src="https://user-images.githubusercontent.com/109619870/183382473-fa01b8ef-ee28-4fb4-8c42-e606a7226b0d.png">
 
 
