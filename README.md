@@ -1,12 +1,36 @@
-# [TITLE]
+# Bay Area Juvenile Halls 
 ## J124 Final Project
 By Olivia "Liv" Freidenreich
 
 This project was made possible by the Board of State and Community Corrections Juvenile Detention Profile Survey. 
 
 ## Story Pitch
-The Juvenile Justice system in California has changed dramatically in the past two years, following Governor Newsome's announcement that all Department of Juvenile Justice facilities will be closed by June 30, 2023. Counties who have incarcerated youth in these high-security, prison-like facilities now have to find suitable housing that abides by Title XV rules 
+The Juvenile Justice system in California has changed dramatically in the past two years, following Governor Newsome's announcement that all Department of Juvenile Justice facilities will be closed by June 30, 2023. Counties who have incarcerated youth in these high-security, prison-like facilities now have to find suitable housing for the youth that formerly lived in DJJ. Strict Title XV rules that outline requirements for hallway width, recreational time, and maximum cell hours are proving difficult to satisfy, so youth remain locked in juvenile halls and juvenile camps/ranches for the meantime.
 
+I plan to look at data that breaks down population size of California incarcerated youth in the past 20 years. The data breaks down population between the three prior specified facilities and also between the status of youth trials. This project feels like the first part of a longer series of data analysis, analysis that will be possible after the next few years when I can look at how the DJJ's closure has impacted other youth facilities.
+
+### Sources
+**Laurel Arroyo**, _Alameda County Office of Public Defenders_ and _President of the Volunteer Board of Pacific Juvenile Defender Center_ <br>
+(415) 595-3795<br>
+Ms. Arroyo has worked as a Public Defender for over 20 years and has defended youth for a decade. She is the director of a group that writes and advocates for bills that protect the rights of juvenile offenders and increase their chances of rehabilitation. She knows the justice system very well and without breaking confidentiality, can tell me about the shortcomings of the system and facilities and how they have impacted her clients. 
+
+**Tracy Gallardo**, _Legislative Assistant to Supervisor Shamann Walton_<br>
+(415) 554-7670<br>
+Ms. Gallardo has worked for the San Francisco County Board of Supervisors for years and knows the juvenile justice system very well. The Board of Supervisors are in charge of finding a replacement for the DJJ and she knows a lot about the Title XV requirements and status of finding a replacement facility. 
+
+**Doug Styles**, _Director of Huckleberry Youth Program’s Community Assessment & Resource Center (CARC)_<br>
+(415) 609-2423<br>
+Mr. Styles is the Director of a community-based organization that provides diversion and rehabilitation programs for system-impacted youth in San Francisco. He is a great source for success stories of youth who have avoided lockup and have grown through rehabilitation programs. 
+
+### Data Sources
+["Alameda County At The Crossroads Of Juvenile Justice Reform"]([url](http://www.cjcj.org/uploads/cjcj/documents/alameda_cross.pdf)) by: Center on Juvenile and Criminal Justice, Ella Baker Center for Human Rights, Books Not Bars Campaign, National Center for Youth Law, National Council on Crime, and Delinquency Youth Law Center
+> The Center for Juvenile and Criminal Justice has released several interesting reports, but I found this one most relevant to my focus on Alameda County. It identifies specific examples of the county failing to treat youth with care and resources and proposes solutions to the problems raised. 
+
+[California State Association of Counties Report]([url](https://www.counties.org/sites/main/files/file-attachments/juvenile_hall_report_and_toolkit_2019.pdf)) breaks down the types of facilities in each county, how they are instructed to treat youth, and the services they offer.
+> This source is important to me because it provides a fairly distanced, unbiased account of juvenile facilities in California. I want to be sure to include a variety of perspectives in my reporting and this is a pretty standard example of such a report.
+
+[November 2021 Report on Financial Restrictions limiting Justice in Juvenile cases](November 2021 Report on Financial Restrictions limiting Justice in Juvenile cases.) by the California Policy Lab. 
+> This report is a little less relevant to the topics I've been researching, but gives an interesting, factual perspective on finances impacting youth's access to justice. It is fairly short and would be good reading for background information. 
 
 ## Cleaning Data
 
@@ -72,24 +96,42 @@ Other information: “JuvenileCamps/Ranches only house Post-Disposition juvenile
 
 <img width="300" alt="Counties sorted by ADP" src="https://user-images.githubusercontent.com/109619870/183314669-6e761f39-1b7f-4d1f-8da1-14d7b0302aa1.png"> <img width="300" alt="Counties sorted by Pre-Disposition as a Percent of ADP" src="https://user-images.githubusercontent.com/109619870/183314671-416485c7-8e7e-406e-90a4-9de27fd77e05.png"> <img width="300" alt="Counties sorted by Post-Disposition as a Percent of ADP" src="https://user-images.githubusercontent.com/109619870/183314674-b1b09c84-9963-4b27-86ce-a2e5a4845acc.png">
 
-> 
+> The pivot table didn’t reveal much of a pattern across Bay Area counties and their relative pre-disposition or post-disposition juveniles. There is a big difference between the raw, average data for all facilities, though. Alameda county reported 63 youth on average in 2021, while Marin county only had 6. 
+
 
 ### Question 4: Let's look at data from 2002 – 2021 across all California counties. How does the average population compare across both _population counts taken_ and _types of facilities_?
-
+#### Analysis Process:
 1. To look at this data, I duplicated Table 1 which held the data of statewide sum of populations within juvenile facilities from 2002 to 2021. 
 2. I then copied and pasted in the data from the statewide combined population of juvenile halls and of juvenile camps/ranches. I would have used a VLOOKUP command if I needed to, but it was easier to just copy and paste it in, because the data was all sorted by year from 2002 – 2021. 
 3. I then made a "Total ADP" column by adding CAFacilities ADP, CAHalls ADP, and CACamp/Ranch ADP. 
-4. I added new columns 
+4. Once I had a Total ADP representing the average population across all 3 types of facilities, I began calculating the percentage breakdown among the three types of facilities. I was interested in learning whether one type held the majority of incarcerated youth, and if these divisions shifted over the past 20 years. 
+    i. To calculate these percentages, I input “=C2/B2” into a new column, D, with C2 being the Facility ADP in 2002 and B2 being the total ADP in 2002. I then copied the formula for the rest of the column and turned the data into percentage form. 
+    ii. I usually would have reduced the decimal places until my percentage was a whole number, but I was struck by the almost perfect 50% that the Facility Percent of Total ADP represented. I was convinced I made an error and rechecked the origins of my data, my transfer methods, and my calculations and continued to get an almost perfect 50%. 
+5. I moved on from this confusion (though I would like to figure it out, because it seems strange that a population size would match up so perfectly year after year) and added new columns and calculated the percentage of the total ADP for juvenile halls and juvenile camps/ranches. 
 
 <img width="888" alt="Screen Shot 2022-08-08 at 12 47 48 AM" src="https://user-images.githubusercontent.com/109619870/183366926-33ac67da-1995-4893-93dc-401949ee4844.png">
 
-### Question 5: Juvenile halls are short-term lockups located in county court buildings. After the announcement of the closure of the DJJ, pressure was added to county facilities like juvenile halls to hold youth until a different solution presents itself. Let's look closer at data for the average daily population of Bay Area juvenile halls over the past 20 years. 
+> I found that while juvenile facilities made up a strangely consistent half of the total population of juvenile centers, juvenile halls quite steadily increased in population size while juvenile camps/ranches steadily decreased. I remained curious _why_ this steady change was this way. Was it because rules and regulations surrounding populations size of detention centers are strict, so there was little room for change? Does the living assignment for youth depend on some strict measurement, like specific types of crimes committed, that would be steady enough to produce this type of data?
 
-pivot table counties - regions
-<img width="338" alt="Screen Shot 2022-08-07 at 8 21 09 PM" src="https://user-images.githubusercontent.com/109619870/183331888-ef7d8bfc-4d3b-4562-b203-936fed7e17ca.png"> 
+### Question 5: Juvenile halls are short-term lockups located in county court buildings. After the announcement of the closure of the DJJ, pressure was added to county facilities like juvenile halls to hold youth who were formerly detained at DJJ until a different solution presents itself. How does data compare across Bay Area counties' juvenile halls? Specifically look at pre- and post-disposition youth. 
+#### Analysis Process:
+1. I imported data from my 5 Bay Area counties and focused on their juvenile hall data only (I excluded Camps/Ranches because they only hold post-disposition youth and excluded Juvenile Facilities as well).
+2. With each table sorted chronologically by year, I carefully copied and pasted in the average daily population counts for both Pre and Post Disposition for each county, checking along the way that the data was correctly transfered. 
 
-<img width="1272" alt="Screen Shot 2022-08-08 at 2 13 18 AM" src="https://user-images.githubusercontent.com/109619870/183383356-4e58d66d-cd59-4a0a-ab9b-500c284a1603.png">
+ <img width="1300" alt="Screen Shot 2022-08-08 at 6 41 20 AM" src="https://user-images.githubusercontent.com/109619870/183431890-598fc881-f1ac-434e-b2e3-b35c2a58ae6d.png">
 
-<img width="330" alt="Screen Shot 2022-08-08 at 2 08 51 AM" src="https://user-images.githubusercontent.com/109619870/183382473-fa01b8ef-ee28-4fb4-8c42-e606a7226b0d.png">
+3. I then imported my data into Datawrapper to better visualize my data. I could see a general decrease in the average daily populations for each county and each type of detainment, but wasn't sure how dramatically it decreased over time.
+4. I made these charts line graphs to illustrate individual counties and their change in a value (ADP) over time. The line graph was the best chart for these parameters. 
+5. I duplicated the first graph and altered it to make the second one, because I wanted them to go one after the other so readers could easily compare the two. I copied the hex code for the colors so they matched across graphs and did my best to mimic the labeling and ALT text for each. When I tested for colorblind readers, I realized the colors I chose were good to differentiate between counties for non-colorblind eyes, but were confusing under colorblind tests. I added "texture" to the lines to show visual, non-color based differences. 
+> Here are my findings, presented in graph form:
 
+![qzG8y-bay-area-counties-are-locking-fewer-and-fewer-of-their-youth-awaiting-trial-in-juvenile-halls](https://user-images.githubusercontent.com/109619870/183430523-7671c292-20f9-4867-b8ea-0f263be6dc41.png)
+[Link to Bay Area by Pre-Disposition chart](https://datawrapper.dwcdn.net/qzG8y/1/)
 
+![1QSpM-average-daily-populations-in-bay-area-juvenile-halls-varied-for-juveniles-post-disposition-but-declined-overall-in-the-past-20-years](https://user-images.githubusercontent.com/109619870/183434814-2d1df6c0-d4c7-45a2-b816-36f5ee7dcc0d.png)
+[Link to Bay Area by Post-Disposition chart](https://www.datawrapper.de/_/1QSpM/)
+
+> My graphs show a decline in the average daily population of youth in Bay Area counties, regardless of pre or post-disposition status. 
+
+### Conclusion
+I was drawn to do this project because I am interested in juvenile justice. I became more concerned with the facilities and resources for system-impacted youth when I learned of the DJJ closure. I see myself coming back to this dataset in a few years, when we can really see the impact of the DJJ's closure on youth. By then, I am optimistic for a rehabilatative, restorative-justice based approach to helping youth stay out of the criminal justice system. 
