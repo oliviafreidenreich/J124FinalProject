@@ -1,4 +1,4 @@
-# Bay Area Juvenile Halls 
+# Bay Area Juvenile Justice
 ## J124 Final Project
 By Olivia "Liv" Freidenreich
 
